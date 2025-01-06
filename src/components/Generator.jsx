@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { jsPDF } from "jspdf";
-import pdfToText from "react-pdftotext"; // Import react-pdftotext for text extraction
+import pdfToText from "react-pdftotext";
 
 const Generate = () => {
   const [file, setFile] = useState(null);
@@ -20,7 +20,7 @@ const Generate = () => {
   // Extract text from PDF
   const extractTextFromPDF = async (file) => {
     try {
-      const text = await pdfToText(file); // Extract text using react-pdftotext
+      const text = await pdfToText(file);
       return text;
     } catch (error) {
       console.error("Error extracting text from PDF:", error);
